@@ -1,7 +1,7 @@
-export default function RootPage() {
+export default function HomePage() {
   return (
-    <main>
+    <div>
       <span>Hello Next.js</span>
-    </main>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: Props) {
+export default function HomeLayout({ children }: Props) {
   return (
     <html>
       <body>{children}</body>
