@@ -1,31 +1,22 @@
-import { createTheme, createThemeContract } from '@vanilla-extract/css';
+import { createTheme } from '@vanilla-extract/css';
+import { blackA, grass, grassA, grassDark, grassDarkA, gray, grayDark, whiteA } from '@radix-ui/colors';
 
-export const vars = createThemeContract({
+export const [light, vars] = createTheme({
   colors: {
-    primary: null,
-    bg100: null,
-    bg200: null,
-    bg300: null,
-    bg400: null,
-    content100: null,
-    content200: null,
-    content300: null,
-    content400: null,
+    ...whiteA,
+    ...blackA,
+    ...gray,
+    ...grass,
+    ...grassA,
   },
 });
 
-export const light = createTheme(vars, {
+export const dark = createTheme(vars, {
   colors: {
-    primary: '#50b654',
-    bg100: '#FFFFFF',
-    bg200: '#CFCFCF',
-    bg300: '#8C8C8C',
-    bg400: '#141517',
-    content100: '#121212',
-    content200: '#595959',
-    content300: '#A0A0A0',
-    content400: '#FFFFFF',
+    ...whiteA,
+    ...blackA,
+    ...grayDark,
+    ...grassDark,
+    ...grassDarkA,
   },
 });
-
-// export const dark = createTheme(vars, {});

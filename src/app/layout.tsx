@@ -2,7 +2,7 @@ import '@/styles/reset.css';
 import '@/styles/global.css';
 
 import React from 'react';
-import { light } from '@/styles/theme.css';
+import { dark } from '@/styles/theme.css';
 import CoreProvider from '@/components/providers/CoreProvider';
 import localFont from 'next/font/local';
 import Layout from '@/components/layouts/Layout';
@@ -18,7 +18,7 @@ const pretendard = localFont({
 export default function HomeLayout({ children }: Props) {
   return (
     <html className={pretendard.className}>
-      <body className={light}>
+      <body className={dark}>
         <CoreProvider>
           <Layout>{children}</Layout>
         </CoreProvider>

@@ -3,23 +3,24 @@ import { vars } from '@/styles/theme.css';
 
 export const button = recipe({
   base: {
-    border: 'none',
+    cursor: 'pointer',
   },
 
   variants: {
+    variant: {
+      contained: {
+        border: 'none',
+      },
+      outlined: {
+        border: '1px solid',
+      },
+      text: {
+        border: 'none',
+        backgroundColor: 'transparent',
+      },
+    },
     color: {
-      base: {
-        color: vars.colors.content400,
-        backgroundColor: vars.colors.primary,
-      },
-      dark: {
-        color: vars.colors.content400,
-        backgroundColor: vars.colors.bg400,
-      },
-      gray: {
-        color: vars.colors.content100,
-        backgroundColor: vars.colors.bg200,
-      },
+      primary: {},
     },
     radius: {
       small: {
@@ -49,12 +50,76 @@ export const button = recipe({
         fontWeight: 700,
       },
     },
+    size: {
+      small: {
+        fontSize: 13,
+        padding: '4px 10px',
+      },
+      medium: {
+        fontSize: 14,
+        padding: '6px 16px',
+      },
+      large: {
+        fontSize: 15,
+        padding: '8px 22px',
+      },
+    },
   },
 
+  compoundVariants: [
+    {
+      variants: {
+        variant: 'contained',
+        color: 'primary',
+      },
+      style: {
+        color: vars.colors.gray1,
+        backgroundColor: vars.colors.grass9,
+        selectors: {
+          '&:hover': {
+            backgroundColor: vars.colors.grass10,
+          },
+        },
+      },
+    },
+    {
+      variants: {
+        variant: 'outlined',
+        color: 'primary',
+      },
+      style: {
+        color: vars.colors.grass9,
+        backgroundColor: 'transparent',
+        borderColor: vars.colors.grass9,
+        selectors: {
+          '&:hover': {
+            backgroundColor: vars.colors.grassA2,
+          },
+        },
+      },
+    },
+    {
+      variants: {
+        variant: 'text',
+        color: 'primary',
+      },
+      style: {
+        color: vars.colors.grass9,
+        selectors: {
+          '&:hover': {
+            backgroundColor: vars.colors.grassA2,
+          },
+        },
+      },
+    },
+  ],
+
   defaultVariants: {
-    color: 'base',
+    variant: 'contained',
+    color: 'primary',
     radius: 'small',
-    weight: 'normal',
+    weight: 'semi',
+    size: 'small',
   },
 });
 
