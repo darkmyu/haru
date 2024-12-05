@@ -1,10 +1,6 @@
 import React from 'react';
-import { container } from '@/app/test.css';
+import Button from '@/components/atoms/Button';
 
 export default function HomePage() {
-  return (
-    <div className={container}>
-      <span>Hello Next.js</span>
-    </div>
-  );
+  return <Button>확인</Button>;
 }
