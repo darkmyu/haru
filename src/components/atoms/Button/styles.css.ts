@@ -74,10 +74,10 @@ export const button = recipe({
       },
       style: {
         color: vars.colors.gray1,
-        backgroundColor: vars.colors.grass9,
+        backgroundColor: vars.colors.grass10,
         selectors: {
           '&:hover': {
-            backgroundColor: vars.colors.grass10,
+            backgroundColor: vars.colors.grassA9,
           },
         },
       },
@@ -88,12 +88,12 @@ export const button = recipe({
         color: 'primary',
       },
       style: {
-        color: vars.colors.grass9,
+        color: vars.colors.grass10,
         backgroundColor: 'transparent',
-        borderColor: vars.colors.grass9,
+        borderColor: vars.colors.grass10,
         selectors: {
           '&:hover': {
-            backgroundColor: vars.colors.grassA2,
+            backgroundColor: vars.colors.grassA3,
           },
         },
       },
@@ -104,7 +104,7 @@ export const button = recipe({
         color: 'primary',
       },
       style: {
-        color: vars.colors.grass9,
+        color: vars.colors.grass10,
         selectors: {
           '&:hover': {
             backgroundColor: vars.colors.grassA2,
