@@ -1,13 +1,12 @@
 import { createTheme } from '@vanilla-extract/css';
-import { blackA, grass, grassA, grassDark, grassDarkA, gray, grayDark, whiteA } from '@radix-ui/colors';
+import { blackA, gray, grayDark, indigo, indigoDark, whiteA } from '@radix-ui/colors';
 
 export const [light, vars] = createTheme({
   colors: {
     ...whiteA,
     ...blackA,
     ...gray,
-    ...grass,
-    ...grassA,
+    ...indigo,
   },
 });
 
@@ -16,7 +15,6 @@ export const dark = createTheme(vars, {
     ...whiteA,
     ...blackA,
     ...grayDark,
-    ...grassDark,
-    ...grassDarkA,
+    ...indigoDark,
   },
 });

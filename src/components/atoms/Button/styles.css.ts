@@ -4,6 +4,11 @@ import { vars } from '@/styles/theme.css';
 export const button = recipe({
   base: {
     cursor: 'pointer',
+    selectors: {
+      '&:hover': {
+        opacity: 0.8,
+      },
+    },
   },
 
   variants: {
@@ -14,13 +19,16 @@ export const button = recipe({
       outlined: {
         border: '1px solid',
       },
-      text: {
-        border: 'none',
-        backgroundColor: 'transparent',
-      },
     },
     color: {
-      primary: {},
+      gray: {
+        color: vars.colors.gray12,
+        backgroundColor: vars.colors.gray4,
+      },
+      indigo: {
+        color: vars.colors.gray1,
+        backgroundColor: vars.colors.indigo10,
+      },
     },
     radius: {
       small: {
@@ -43,7 +51,7 @@ export const button = recipe({
       medium: {
         fontWeight: 500,
       },
-      semi: {
+      semiBold: {
         fontWeight: 600,
       },
       bold: {
@@ -67,59 +75,23 @@ export const button = recipe({
   },
 
   compoundVariants: [
+    /** outlined styles */
     {
-      variants: {
-        variant: 'contained',
-        color: 'primary',
-      },
-      style: {
-        color: vars.colors.gray1,
-        backgroundColor: vars.colors.grass10,
-        selectors: {
-          '&:hover': {
-            backgroundColor: vars.colors.grassA9,
-          },
-        },
-      },
+      variants: { variant: 'outlined', color: 'gray' },
+      style: { backgroundColor: 'transparent', borderColor: vars.colors.gray10 },
     },
     {
-      variants: {
-        variant: 'outlined',
-        color: 'primary',
-      },
-      style: {
-        color: vars.colors.grass10,
-        backgroundColor: 'transparent',
-        borderColor: vars.colors.grass10,
-        selectors: {
-          '&:hover': {
-            backgroundColor: vars.colors.grassA3,
-          },
-        },
-      },
-    },
-    {
-      variants: {
-        variant: 'text',
-        color: 'primary',
-      },
-      style: {
-        color: vars.colors.grass10,
-        selectors: {
-          '&:hover': {
-            backgroundColor: vars.colors.grassA2,
-          },
-        },
-      },
+      variants: { variant: 'outlined', color: 'indigo' },
+      style: { backgroundColor: 'transparent', borderColor: vars.colors.indigo10, color: vars.colors.indigo10 },
     },
   ],
 
   defaultVariants: {
     variant: 'contained',
-    color: 'primary',
+    color: 'gray',
     radius: 'small',
-    weight: 'semi',
-    size: 'small',
+    weight: 'semiBold',
+    size: 'large',
   },
 });
 
