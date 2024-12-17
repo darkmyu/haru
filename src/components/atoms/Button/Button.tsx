@@ -1,7 +1,7 @@
 import React from 'react';
 import { button, ButtonVariants } from '@/components/atoms/Button/styles.css';
 
-type Props = React.ComponentPropsWithoutRef<'button'> & ButtonVariants;
+type Props = React.ComponentProps<'button'> & ButtonVariants;
 
 function Button({ variant, color, radius, weight, size, children, ...props }: Props) {
   return (
