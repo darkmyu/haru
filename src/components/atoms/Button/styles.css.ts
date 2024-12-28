@@ -22,12 +22,12 @@ export const button = recipe({
     },
     color: {
       gray: {
-        color: vars.colors.gray12,
-        backgroundColor: vars.colors.gray4,
+        color: vars.colors.content,
+        backgroundColor: vars.colors.interactive.gray2,
       },
       indigo: {
-        color: vars.colors.gray1,
-        backgroundColor: vars.colors.indigo10,
+        color: vars.colors.contentInverse,
+        backgroundColor: vars.colors.primary,
       },
     },
     radius: {
@@ -78,11 +78,11 @@ export const button = recipe({
     /** outlined styles */
     {
       variants: { variant: 'outlined', color: 'gray' },
-      style: { backgroundColor: 'transparent', borderColor: vars.colors.gray10 },
+      style: { backgroundColor: 'transparent', borderColor: vars.colors.border.gray2 },
     },
     {
       variants: { variant: 'outlined', color: 'indigo' },
-      style: { backgroundColor: 'transparent', borderColor: vars.colors.indigo10, color: vars.colors.indigo10 },
+      style: { backgroundColor: 'transparent', borderColor: vars.colors.primary, color: vars.colors.primary },
     },
   ],
 

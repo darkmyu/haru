@@ -28,7 +28,7 @@ globalStyle('blockquote, q', {
 });
 
 globalStyle('blockquote:before, blockquote:after, q:before, q:after', {
-  contentText: ['', 'none'],
+  content: ['', 'none'],
 });
 
 globalStyle('table', {
