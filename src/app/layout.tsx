@@ -1,11 +1,11 @@
 import '@/styles/reset.css';
 import '@/styles/global.css';
+import '@/styles/theme.css';
 
 import React from 'react';
 import CoreProvider from '@/components/providers/CoreProvider';
 import localFont from 'next/font/local';
 import Layout from '@/components/layouts/Layout';
-import { darkTheme } from '@/styles/theme.css';
 
 interface Props {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ const pretendard = localFont({
 
 export default function HomeLayout({ children }: Props) {
   return (
-    <html className={[pretendard.className, darkTheme].join(' ')}>
+    <html className={pretendard.className} suppressHydrationWarning>
       <body>
         <CoreProvider>
           <Layout>{children}</Layout>

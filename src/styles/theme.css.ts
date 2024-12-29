@@ -1,29 +1,32 @@
-import { createTheme, createThemeContract } from '@vanilla-extract/css';
+import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/css';
 import { gray, grayDark, indigo, indigoDark } from '@radix-ui/colors';
 
-const themeContract = createThemeContract({
-  colors: {
-    primary: null,
-    content: null,
-    contentInverse: null,
-    background: {
-      gray1: null,
-      gray2: null,
-    },
-    interactive: {
-      gray3: null,
-      gray4: null,
-      gray5: null,
-    },
-    border: {
-      gray6: null,
-      gray7: null,
-      gray8: null,
+export const vars = createGlobalThemeContract(
+  {
+    colors: {
+      primary: null,
+      content: null,
+      contentInverse: null,
+      background: {
+        gray1: null,
+        gray2: null,
+      },
+      interactive: {
+        gray3: null,
+        gray4: null,
+        gray5: null,
+      },
+      border: {
+        gray6: null,
+        gray7: null,
+        gray8: null,
+      },
     },
   },
-});
+  (_, path) => path.join('-'),
+);
 
-export const lightTheme = createTheme(themeContract, {
+createGlobalTheme(':root', vars, {
   colors: {
     primary: indigo.indigo10,
     content: gray.gray12,
@@ -45,7 +48,7 @@ export const lightTheme = createTheme(themeContract, {
   },
 });
 
-export const darkTheme = createTheme(themeContract, {
+createGlobalTheme('[data-theme="dark"]', vars, {
   colors: {
     primary: indigoDark.indigo10,
     content: grayDark.gray12,
@@ -66,5 +69,3 @@ export const darkTheme = createTheme(themeContract, {
     },
   },
 });
-
-export const vars = { ...themeContract };
