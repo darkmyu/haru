@@ -11,8 +11,8 @@ function Header() {
         <p className={title}>HARU-TALK</p>
         <div className={toolkit}>
           <div className={theme}>
-            <SunIcon color={vars.colors.content} />
-            <MoonIcon color={vars.colors.content} />
+            <SunIcon color={vars.colors.content.gray12} />
+            <MoonIcon color={vars.colors.content.gray12} />
           </div>
           <Button variant={'outlined'} size={'medium'} radius={'large'}>
             로그인

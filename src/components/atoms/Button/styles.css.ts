@@ -21,11 +21,11 @@ export const button = recipe({
     },
     color: {
       gray: {
-        color: vars.colors.content,
+        color: vars.colors.content.gray12,
         backgroundColor: vars.colors.interactive.gray4,
       },
       indigo: {
-        color: vars.colors.contentInverse,
+        color: vars.colors.background.gray1,
         backgroundColor: vars.colors.primary,
       },
     },

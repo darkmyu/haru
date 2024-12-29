@@ -5,8 +5,6 @@ export const vars = createGlobalThemeContract(
   {
     colors: {
       primary: null,
-      content: null,
-      contentInverse: null,
       background: {
         gray1: null,
         gray2: null,
@@ -21,6 +19,14 @@ export const vars = createGlobalThemeContract(
         gray7: null,
         gray8: null,
       },
+      solid: {
+        gray9: null,
+        gray10: null,
+      },
+      content: {
+        gray11: null,
+        gray12: null,
+      },
     },
   },
   (_, path) => path.join('-'),
@@ -29,8 +35,6 @@ export const vars = createGlobalThemeContract(
 createGlobalTheme(':root', vars, {
   colors: {
     primary: indigo.indigo10,
-    content: gray.gray12,
-    contentInverse: gray.gray1,
     background: {
       gray1: gray.gray1,
       gray2: gray.gray2,
@@ -45,14 +49,20 @@ createGlobalTheme(':root', vars, {
       gray7: gray.gray7,
       gray8: gray.gray8,
     },
+    solid: {
+      gray9: gray.gray9,
+      gray10: gray.gray10,
+    },
+    content: {
+      gray11: gray.gray11,
+      gray12: gray.gray12,
+    },
   },
 });
 
 createGlobalTheme('[data-theme="dark"]', vars, {
   colors: {
     primary: indigoDark.indigo10,
-    content: grayDark.gray12,
-    contentInverse: grayDark.gray1,
     background: {
       gray1: grayDark.gray1,
       gray2: grayDark.gray2,
@@ -66,6 +76,14 @@ createGlobalTheme('[data-theme="dark"]', vars, {
       gray6: grayDark.gray6,
       gray7: grayDark.gray7,
       gray8: grayDark.gray8,
+    },
+    solid: {
+      gray9: grayDark.gray9,
+      gray10: grayDark.gray10,
+    },
+    content: {
+      gray11: grayDark.gray11,
+      gray12: grayDark.gray12,
     },
   },
 });
