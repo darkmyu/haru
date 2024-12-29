@@ -3,5 +3,5 @@ import { vars } from '@/styles/theme.css';
 
 export const root = style({
   height: '100dvh',
-  backgroundColor: vars.colors.background,
+  backgroundColor: vars.colors.background.gray2,
 });

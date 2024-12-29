@@ -1,59 +1,70 @@
 import { createTheme, createThemeContract } from '@vanilla-extract/css';
 import { gray, grayDark, indigo, indigoDark } from '@radix-ui/colors';
 
-export const vars = createThemeContract({
+const themeContract = createThemeContract({
   colors: {
     primary: null,
     content: null,
     contentInverse: null,
-    background: null,
-    interactive: {
+    background: {
       gray1: null,
       gray2: null,
+    },
+    interactive: {
       gray3: null,
+      gray4: null,
+      gray5: null,
     },
     border: {
-      gray1: null,
-      gray2: null,
-      gray3: null,
+      gray6: null,
+      gray7: null,
+      gray8: null,
     },
   },
 });
 
-export const light = createTheme(vars, {
+export const lightTheme = createTheme(themeContract, {
   colors: {
     primary: indigo.indigo10,
     content: gray.gray12,
     contentInverse: gray.gray1,
-    background: gray.gray2,
+    background: {
+      gray1: gray.gray1,
+      gray2: gray.gray2,
+    },
     interactive: {
-      gray1: gray.gray3,
-      gray2: gray.gray4,
-      gray3: gray.gray5,
+      gray3: gray.gray3,
+      gray4: gray.gray4,
+      gray5: gray.gray5,
     },
     border: {
-      gray1: gray.gray6,
-      gray2: gray.gray7,
-      gray3: gray.gray8,
+      gray6: gray.gray6,
+      gray7: gray.gray7,
+      gray8: gray.gray8,
     },
   },
 });
 
-export const dark = createTheme(vars, {
+export const darkTheme = createTheme(themeContract, {
   colors: {
     primary: indigoDark.indigo10,
     content: grayDark.gray12,
     contentInverse: grayDark.gray1,
-    background: grayDark.gray2,
+    background: {
+      gray1: grayDark.gray1,
+      gray2: grayDark.gray2,
+    },
     interactive: {
-      gray1: grayDark.gray3,
-      gray2: grayDark.gray4,
-      gray3: grayDark.gray5,
+      gray3: grayDark.gray3,
+      gray4: grayDark.gray4,
+      gray5: grayDark.gray5,
     },
     border: {
-      gray1: grayDark.gray6,
-      gray2: grayDark.gray7,
-      gray3: grayDark.gray8,
+      gray6: grayDark.gray6,
+      gray7: grayDark.gray7,
+      gray8: grayDark.gray8,
     },
   },
 });
+
+export const vars = { ...themeContract };

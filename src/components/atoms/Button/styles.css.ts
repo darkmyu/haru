@@ -10,7 +10,6 @@ export const button = recipe({
       },
     },
   },
-
   variants: {
     variant: {
       contained: {
@@ -23,7 +22,7 @@ export const button = recipe({
     color: {
       gray: {
         color: vars.colors.content,
-        backgroundColor: vars.colors.interactive.gray2,
+        backgroundColor: vars.colors.interactive.gray4,
       },
       indigo: {
         color: vars.colors.contentInverse,
@@ -75,10 +74,10 @@ export const button = recipe({
   },
 
   compoundVariants: [
-    /** outlined styles */
+    // outlined compound styles
     {
       variants: { variant: 'outlined', color: 'gray' },
-      style: { backgroundColor: 'transparent', borderColor: vars.colors.border.gray2 },
+      style: { backgroundColor: 'transparent', borderColor: vars.colors.border.gray7 },
     },
     {
       variants: { variant: 'outlined', color: 'indigo' },
