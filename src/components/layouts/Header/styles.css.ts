@@ -28,7 +28,3 @@ export const toolkit = style({
   alignItems: 'center',
   gap: 16,
 });
-
-export const theme = style({
-  cursor: 'pointer',
-});

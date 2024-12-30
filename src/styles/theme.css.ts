@@ -1,5 +1,5 @@
 import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/css';
-import { gray, grayDark, indigo, indigoDark } from '@radix-ui/colors';
+import { gray, grayDark, jade, jadeDark } from '@radix-ui/colors';
 
 export const vars = createGlobalThemeContract(
   {
@@ -34,7 +34,7 @@ export const vars = createGlobalThemeContract(
 
 createGlobalTheme(':root', vars, {
   colors: {
-    primary: indigo.indigo10,
+    primary: jade.jade10,
     background: {
       gray1: gray.gray1,
       gray2: gray.gray2,
@@ -62,7 +62,7 @@ createGlobalTheme(':root', vars, {
 
 createGlobalTheme('[data-theme="dark"]', vars, {
   colors: {
-    primary: indigoDark.indigo10,
+    primary: jadeDark.jade10,
     background: {
       gray1: grayDark.gray1,
       gray2: grayDark.gray2,
