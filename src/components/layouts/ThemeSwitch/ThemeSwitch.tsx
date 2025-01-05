@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { container } from '@/components/layouts/ThemeSwitch/styles.css';
+import * as styles from './ThemeSwitch.css';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import { vars } from '@/styles/theme.css';
 import { useTheme } from 'next-themes';
@@ -21,7 +21,7 @@ function ThemeSwitch() {
   if (!isMounted) return null;
 
   return (
-    <div className={container} onClick={handleChangeTheme}>
+    <div className={styles.container} onClick={handleChangeTheme}>
       {resolvedTheme === 'light' && <MoonIcon color={vars.colors.content.gray12} />}
       {resolvedTheme === 'dark' && <SunIcon color={vars.colors.content.gray12} />}
     </div>

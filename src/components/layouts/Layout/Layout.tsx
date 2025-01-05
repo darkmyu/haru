@@ -1,5 +1,5 @@
 import React from 'react';
-import { root } from '@/components/layouts/Layout/styles.css';
+import * as styles from './Layout.css';
 import Header from '@/components/layouts/Header';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 function Layout({ children }: Props) {
   return (
-    <div className={root}>
+    <div className={styles.root}>
       <Header />
       <main>{children}</main>
       <footer>Footer</footer>
