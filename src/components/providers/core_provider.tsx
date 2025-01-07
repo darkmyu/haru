@@ -1,6 +1,6 @@
 import React from 'react';
-import TanStackQueryProvider from '@/components/providers/TanStackQueryProvider';
-import ThemeProvider from '@/components/providers/ThemeProvider';
+import TanStackQueryProvider from '@/components/providers/tan_stack_query_provider';
+import ThemeProvider from '@/components/providers/theme_provider';
 
 interface Props {
   children: React.ReactNode;

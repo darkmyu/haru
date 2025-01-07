@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import * as styles from './ThemeSwitch.css';
+import * as styles from './theme_switch.css';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import { vars } from '@/styles/theme.css';
 import { useTheme } from 'next-themes';

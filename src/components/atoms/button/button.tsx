@@ -1,5 +1,5 @@
 import React from 'react';
-import { button, ButtonVariants } from '@/components/atoms/Button/Button.css';
+import { button, ButtonVariants } from '@/components/atoms/button/button.css';
 
 type Props = React.ComponentProps<'button'> & ButtonVariants;
 

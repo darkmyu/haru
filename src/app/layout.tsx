@@ -3,9 +3,9 @@ import '@/styles/theme.css';
 import '@/styles/global.css';
 
 import React from 'react';
-import CoreProvider from '@/components/providers/CoreProvider';
 import localFont from 'next/font/local';
-import Layout from '@/components/layouts/Layout';
+import Layout from '@/components/layouts/layout';
+import CoreProvider from '@/components/providers/core_provider';
 
 interface Props {
   children: React.ReactNode;
